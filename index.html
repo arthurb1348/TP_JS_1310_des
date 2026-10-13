@@ -8,12 +8,23 @@
     <title>tp-0910</title>
   </head>
   <body>
-    <div>
-      <h1>Lancer une partie</h1>
-      <button type="submit">Lancer les Dés</button>
-      <p id="p1"></p>
-      <p id="p2"></p>
-    </div> 
+    <h1>Partie de dés</h1>
+
+    <form id="form-partie">
+        <label for="joueur1">Premier joueur :</label>
+        <input id="joueur1" type="text" placeholder="Joueur 1" required>
+
+        <label for="joueur2">Deuxième joueur :</label>
+        <input id="joueur2" type="text" placeholder="Joueur 2" required>
+
+        <label for="nbrTour">Nombre de tours :</label>
+        <input id="nbrTour" type="number" min="1" step="1" value="5" required>
+
+        <button id="lancer" type="submit">Lancer la partie</button>
+    </form>
+
+    <p id="erreur" role="alert"></p>
+    <p id="p1"></p>
     <script type="module" src="main.js"></script>
   </body>
 </html>
